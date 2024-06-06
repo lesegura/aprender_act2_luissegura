@@ -1,0 +1,27 @@
+---
+title: "RMarkdown_actividad_2"
+author: "Luis Segura"
+date: "2024-06-06"
+output: github_document
+---
+
+## Introduccion
+
+Primero voy a cargar la base de datos llamada NHANES que se encuentra dentro del paquete NHANES.
+
+```{r}
+library(tidyverse)
+
+data("NHANES", package = "NHANES")
+
+```
+
+## Objetivo 1 - Descripcion de la base de datos
+La NHANES es una encuesta recolectada por el NCHS que recolecta datos en salud y nutricion desde los 60. Es una base de datos de individuos que viven en hogares. 
+
+```{r}
+class(NHANES)
+```
+
+El NHANES es un dataframe o base de datos compuesto por `r nrow(NHANES)` y por `r ncol(NHANES)` variables.
+
